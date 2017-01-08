@@ -1,2 +1,4 @@
-# CSCE240S2017
-This is meant to assist in the learning of the C++ programming Language.
+# Tutorial and Examples for C++
+## CSCE 240 at UofSC
+
+This is a brief guide to using C++ as specified by the CSCE240 class at the University of South Carolina.
