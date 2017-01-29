@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
     
-    int a[][] = new int[5][5];
+    int a[5][5];
     int a_width = 5;
     int a_height = 5;
     

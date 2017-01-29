@@ -27,7 +27,7 @@ int main() {
     
     cat = new char[strlen(str1) + strlen(str2) + strlen(str3)];
     
-    cout << str << endl << str2 << endl << str3 << endl;
+    cout << str1 << endl << str2 << endl << str3 << endl;
     
     while (str1[a] != '\0' || str2[b] != '\0' || str3[c] != '\0') {
         if (str1[a] != '\0') {

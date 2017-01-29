@@ -22,7 +22,7 @@ int main() {
         cout << p[b] << " ";
         b--;
     }
-    
+    cout << endl;    
     
     return 0;
 }

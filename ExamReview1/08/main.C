@@ -15,8 +15,8 @@ int main() {
     int b = 1;
     
     cout << (b += 30) << endl;//31
-    cout << (b -= 21) << endl;//10
-    cout << (b %= 4) << endl;
+    cout << (++b -= 21) << endl;//10
+    cout << (--b %= 4) << endl;
     
     cout << a[b] << endl;
     

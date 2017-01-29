@@ -14,9 +14,10 @@ int main() {
     int j = 7;
     
     while (j != 0) {
-        for (int = j - i; k >= 0; k--) {
-            cout << "*" << endl;
+        for (int k = j - i; k >= 0; k--) {
+            cout << "*";
         }
+        cout << endl;
         i++;
         j--;
     }

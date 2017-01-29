@@ -11,16 +11,18 @@ using namespace std;
 
 int main() {
     
-    int * a;
+    int * a, * b;
     int N = 5;
     
     a = new int[N];
+
+    b = a;
     
     for (int i = 0; i < N; i++) {
         a[i] = i * N;
     }
     cout << *++a << endl;
     
-    delete [] a;
+    delete [] b;
     return 0;
 }
