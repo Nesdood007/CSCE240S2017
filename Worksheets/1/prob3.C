@@ -16,7 +16,7 @@ int main() {
     b = &a[0];
 
     for (int i = 0; i < a_size; i++) {
-        cout << b++ << " " << a[i] << endl;
+        cout << *b++ << " " << a[i] << endl;
     }
     
     return 0;
