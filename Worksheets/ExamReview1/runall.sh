@@ -5,4 +5,4 @@
 #DIRS= $(find -maxdepth 2);
 EXEC= exec;
 #(cd (cat $DIRS) && make && ./exec >> output);
-(cd `find -maxdepth 2` && make && ./$EXEC >> output);
+(cd `find -maxdepth 2 -mindepth 2 -not -name README.md` && make && ./$EXEC >> output);
