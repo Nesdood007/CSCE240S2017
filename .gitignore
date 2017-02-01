@@ -1,5 +1,6 @@
 #Patterns on each line will be ignored in commits and such
 
+exec
 *.out
 *.o
 
