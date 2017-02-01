@@ -1,0 +1,5 @@
+#Patterns on each line will be ignored in commits and such
+
+*.out
+*.o
+
