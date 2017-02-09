@@ -62,7 +62,7 @@ int smallestNumber(const int *a, const int a_size) {
  *      const int *b -> Array b
  *      const int b_size -> Size of Array b
  */
-void jumbleArrays(const int *a, const int a_size, const int *b, const int b_size) {
+void jumbleArrays(int *a, const int a_size, int *b, const int b_size) {
     int temp = 0;
     for (int i = 0; i < a_size && i < b_size; i++) {
         if (i % 2 == 1) {

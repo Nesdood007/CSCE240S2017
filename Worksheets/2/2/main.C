@@ -14,12 +14,15 @@ int main() {
     int * c;
     
     c = sumArray(a, a_size, b, b_size);
+    cout << "Array C: "; 
     
     if (c != NULL) {
         for (int i = 0; i < a_size; i++) {
-            cout << c[i] << endl;
+            cout << c[i] << " ";
         }
     }
+    
+    cout << endl;
     
     cout << arraySum(a, a_size) << endl;
     

@@ -2,6 +2,9 @@
         Be careful not to include things multiple times!!
 */
 
+#ifndef _PROB_H
+#define _PROB_H
+
 #include <iostream> //Including a System Library
 using namespace std;
 
@@ -13,4 +16,6 @@ int arraySum(const int *, const int);
 int largestNumber(const int *, const int);
 int smallestNumber(const int *, const int);
 //Swaps every other element in the array until it hits the end
-void jumbleArrays(const int * , const int , const int *, const int);
+void jumbleArrays(int *, const int, int *, const int);
+
+#endif
