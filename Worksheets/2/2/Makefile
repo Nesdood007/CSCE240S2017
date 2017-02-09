@@ -1,6 +1,7 @@
 CC = g++
 CCFLAGS = -g -Wall
 EXEC = exec
+OUT = output.txt
 exec: main.o prob.o
 	$(CC) $(CCFLAG) -o $(EXEC) main.o prob.o
 main.o: main.C
@@ -12,3 +13,5 @@ clear:
 	rm -rf *.o
 run:
 	./$(EXEC)
+out:
+	./$(EXEC) > $(OUT)

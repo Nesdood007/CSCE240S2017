@@ -1,0 +1,7 @@
+Array C: 5 7 9 11 13 
+10
+Array A: 0 6 2 8 4 
+Array B: 5 1 7 3 9 
+Largest Number: 8
+Smallest Number: 0
+Array Sum of B: 25
