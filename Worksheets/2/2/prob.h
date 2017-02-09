@@ -10,7 +10,7 @@ int* sumArray(const int * , const int , const int *, const int );
 int arraySum(const int *, const int);
 
 //Write these functions
-//int largestNumber(const int *, const int);
-//int smallestNumber(const int *, const int);
+int largestNumber(const int *, const int);
+int smallestNumber(const int *, const int);
 //Swaps every other element in the array until it hits the end
-//void jumbleArrays(const int * , const int , const int *, const int);
+void jumbleArrays(const int * , const int , const int *, const int);

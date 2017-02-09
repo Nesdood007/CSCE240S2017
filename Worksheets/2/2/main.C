@@ -21,14 +21,24 @@ int main() {
         }
     }
     
-    cout << arraySum(a, a_size, b, b_size) << endl;
+    cout << arraySum(a, a_size) << endl;
     
-    //For Later problems:
-    /*
-    jumbleArrays(a, b);
-    cout << largestNumber(a, a_size, b, b_size) << endl;
-    cout << smallestNumber(a, a_size, b, b_size) << endl;
-    cout << arraySum(a, a_size, b, b_size) << endl;
-    */
+    //For the Solutions:
     
+    jumbleArrays(a, a_size, b, b_size);
     
+    cout << "Array A: ";
+    for (int i = 0; i < a_size; i++) {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+    cout << "Array B: ";
+    for (int i = 0; i < b_size; i++) {
+        cout << b[i] << " ";
+    }
+    cout << endl;
+    
+    cout << "Largest Number: " << largestNumber(a, a_size) << endl;
+    cout << "Smallest Number: " << smallestNumber(a, a_size) << endl;
+    cout << "Array Sum of B: " << arraySum(b, b_size) << endl;   
+}
