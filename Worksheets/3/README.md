@@ -1,4 +1,4 @@
-# Worksheet 3:
+# Worksheet 3: MAkefiles Galore!
 
 This worksheet covers the following topics:
 * Makefiles with one .C source file

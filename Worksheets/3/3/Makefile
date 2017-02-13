@@ -1,13 +1,19 @@
-#Makefile for Project2
+#Worksheet 3: Makefiles Galore!
 CC = g++
-CCFLAGS = -g -Wall -w
-
-exec: main.o xArray.o
-	$(CC) $(CCFLAG) -o test main.o xArray.o
+CCFLAGS = -Wall -g
+EXEC = exec.out
+OUTPUT = output.txt
+exec: main.C prob.o
+	$(CC) $(CCFLAG) -o $(EXEC) main.o prob.o
 main.o: main.C
 	$(CC) $(CCFLAG) -c main.C
-xArray.o: xArray.C xArray.h
-	$(CC) $(CCFLAG) -c xArray.C
+prob.o: prob.C prob.h
+	$(CC) $(CCFLAG) -c prob.C
 
-clean:
-	rm -rf *.o test
+clear: 
+	rm -rf *.o
+run:
+	./$(EXEC)
+out: 
+	./$(EXEC) > $(OUT)
+	
