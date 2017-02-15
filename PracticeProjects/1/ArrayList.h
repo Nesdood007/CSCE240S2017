@@ -6,17 +6,17 @@
 using namespace std;
 
 class ArrayList {
-    int listSize = 0;//List Size
-    int arraySize = 0;//Internal Array
+    int listLength = 0;//List Size
+    int arrayLength = 0;//Internal Array
     int * array;
 
     public:
-        Course(int size);
-        ~Course();
+        ArrayList(int size);
+        ~ArrayList();
         
-        void append(int );
+        void append(int);
         void insert(int, int);
-        void remove(int );
+        void remove(int);
         int get(int);
 };
 #endif
