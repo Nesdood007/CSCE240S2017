@@ -6,8 +6,8 @@
 using namespace std;
 
 class ArrayList {
-    int listLength = 0;//List Size
-    int arrayLength = 0;//Internal Array
+    int listLength;//List Size
+    int arrayLength;//Internal Array
     int * array;
 
     public:
@@ -18,5 +18,9 @@ class ArrayList {
         void insert(int, int);
         void remove(int);
         int get(int);
+    private:
+        void checkIndex(int);
+        void shiftArray(int, int);
+        void resizeArray(int);
 };
 #endif

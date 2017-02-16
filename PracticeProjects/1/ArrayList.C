@@ -45,3 +45,29 @@ int ArrayList::get(int index) {
         throw "Index Out Of Bounds";
     }
 }
+
+//Checks the Index to see if it is valid. Throws exception if it is not
+void ArrayList::checkIndex(int i) {
+    if (i < 0 || i >= arrayLength) {
+        cerr << "Index " << i << " is Out Of Bounds" << endl;
+        throw "Index Out Of Bounds";
+    }
+}
+//Resizes the internal Array
+void ArrayList::resizeArray(int newSize) {
+    int * oldArray = &array;
+    int * newArray = new int[newSize];
+    for (int i = 0; i < newSize && i < arraySize; i++) {
+        newArray[i] = oldArray[i];
+    }
+    delete [] oldArray;
+    array = newArray;
+    arrayLength = newSize;
+}
+
+//Shifts the Internal Array by the given amount
+void ArrayList::shiftArray(int startIndex, int amount) {
+    for(int i = startIndex; i < arrayLength && i >= 0 && i + amount < arrayLength && i + amount >= 0; i++) {
+        array[i + amount] = array[i];
+    }
+}
