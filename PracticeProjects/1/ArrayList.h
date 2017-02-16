@@ -18,9 +18,13 @@ class ArrayList {
         void insert(int, int);
         void remove(int);
         int get(int);
+        //Debug Functions
+        void printList();
     private:
         void checkIndex(int);
         void shiftArray(int, int);
         void resizeArray(int);
+        void checkSize();
+
 };
 #endif

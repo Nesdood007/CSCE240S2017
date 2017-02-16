@@ -12,38 +12,33 @@ ArrayList::~ArrayList() {
 
 //Appends item to the end of the List
 void ArrayList::append(int item) {
+    if (listLength == arrayLength) {
+        resizeArray()
+    }
+    
     listLength++;
     array[listLength] = item;
 }
 
 //Inserts item after a given index
 void ArrayList::insert(int index, int item) {
-    if (index > 0 && index < listLength) {
-        array[index] = item;
-    } else {
-        throw "Index Out of Bounds";
-    }
+    checkBounds(index);
+    array[index] = item;
 }
 
 //Removes the item at a given index
 void ArrayList::remove(int index) {
-    if (index > 0 && index < listLength) {
-        for (int i = index; i < listLength; i++) {
-            array[i] = array[i + 1];
-        }
-        listLength--;
-     } else {
-         throw "Index Out of Bounds";
-     }
+    checkBounds(index);
+    for (int i = index; i < listLength; i++) {
+        array[i] = array[i + 1];
+    }
+    listLength--;
 }
 
 //Retrieve the item at a given index
 int ArrayList::get(int index) {
-    if (index > 0 && index < listLength) {
-        return array[index];
-    } else {
-        throw "Index Out Of Bounds";
-    }
+    checkBounds(index);
+    return array[index];
 }
 
 //Checks the Index to see if it is valid. Throws exception if it is not
@@ -67,7 +62,35 @@ void ArrayList::resizeArray(int newSize) {
 
 //Shifts the Internal Array by the given amount
 void ArrayList::shiftArray(int startIndex, int amount) {
-    for(int i = startIndex; i < arrayLength && i >= 0 && i + amount < arrayLength && i + amount >= 0; i++) {
-        array[i + amount] = array[i];
+    if (amount > 0) {
+        for(int i = startIndex; i < arrayLength && i >= 0 && i + amount < arrayLength && i + amount >= 0; i++) {
+            array[i + amount] = array[i];
+        }
+    } else if (amount < 0) {
+        for(int i = arrayLength - 1; i < arrayLength && i >= 0 && i + amount < arrayLength && i + amount >= 0; i--) {
+            array[i + amount] = array[i];
+        }
     }
+}
+
+//Checks the size of the List versus the size of the array
+void ArrayList::checkSize() {
+    if (arrayLength == listSize) {
+        resizeArray(2 * listSize);
+    } else if(listLength <= arrayLength / 2) {
+        resizeArray(listSize / 2);
+    }
+}
+
+//Debug Function that prints the entire List and internal Array Contents
+void ArrayList::printList() {
+    cout << "List: ";
+    for (int i = 0; i < listLength; i++) {
+        cout << array[i] + " ";
+    }
+    cout << endl << "Internal Array: ";
+    for (int i = 0; i < arrayLength; i++) {
+        cout << array[i] + " ";
+    }
+    cout << endl;
 }
