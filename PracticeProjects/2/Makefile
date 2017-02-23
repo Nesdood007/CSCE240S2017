@@ -10,10 +10,10 @@ main.o: main.C
 	$(CC) $(CCFLAG) -c main.C
 
 LinkedList.o: LinkedList.C LinkedList.h
-	$(CC) $(CCFLAG) -c LinkedList.C LinkedList.h
+	$(CC) $(CCFLAG) -c LinkedList.C
 #Helpful Rules for Automating Things
 clean:
-	rm -rf *.o $(EXEC)
+	rm -rf *.o *.gch $(EXEC)
 run:
 	./$(EXEC)
 out:

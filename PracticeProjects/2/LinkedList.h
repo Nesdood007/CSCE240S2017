@@ -15,7 +15,7 @@ class LinkedList {
         void insert(int, int);
         int size();
         int get(int);
-
+        void remove(int);
         
 };
 
