@@ -4,3 +4,6 @@ exec
 *.out
 *.o
 
+#Patterns that vim leaves behind
+*.swp
+*.gch
