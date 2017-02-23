@@ -10,10 +10,13 @@ class LinkedList {
     Node* head;
     public:
         LinkedList();
+        void printList();
         void append(int);
         void insert(int, int);
         int size();
         int get(int);
+
+        
 };
 
 class Node {
