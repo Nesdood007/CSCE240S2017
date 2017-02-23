@@ -6,15 +6,13 @@ LinkedList::LinkedList() {
 
 void LinkedList::append(int data) {
     if (head == NULL) {
-        head = new Node();
-        head -> data = data;
+        head = new Node(data, NULL);
     } else {
         Node *curr = head;
         while (curr != NULL) {
             curr = head -> next;
         }
-        curr = new Node();
-        curr -> data = data;
+        curr = new Node(data, NULL);
     }
 }
 void LinkedList::insert(int position, int data) {
@@ -29,15 +27,23 @@ int LinkedList::size() {
     return size;
 }
 int LinkedList::get(int index) {
-    Node *curr = head;
-    int i = 0;
-    while (curr != NULL) {
-        curr = head -> next;
-        
-        if (i == index) {
-            return curr -> data;
+    if (head != NULL) {
+        Node *curr = head;
+        for (int i = 0; i <= index && curr -> next != NULL; i++) {
+            curr = curr -> next;
         }
-        i++;
+        return curr -> data;
     }
-    return NULL;
+    cout << "Invalid Index" << endl;
+    return 0;
+}
+
+Node::Node() {
+    data = 0;
+    next = NULL;
+}
+
+Node::Node(int d, Node *n) {
+    data = d;
+    next = n;
 }

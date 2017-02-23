@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+class Node;
+
 class LinkedList {
     Node* head;
     public:
@@ -12,7 +14,6 @@ class LinkedList {
         void insert(int, int);
         int size();
         int get(int);
-        friend class Node;
 };
 
 class Node {
@@ -20,8 +21,7 @@ class Node {
     int data;
     public:
         Node();
+        Node(int, Node*);
+        friend class LinkedList;
 };
-
-
-
 #endif
