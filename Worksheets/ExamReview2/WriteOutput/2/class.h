@@ -4,5 +4,6 @@
 #include <iostream>
 using namespacce std;
 
+void f1(int, int);
 
 #endif
