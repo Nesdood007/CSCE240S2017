@@ -4,17 +4,19 @@
 #include <iostream>
 using namespacce std;
 
-void f1(const A&, const A&);
-
 class A {
-    int a;
-    int b;
+    int a, b;
     public:
         A();
         A(const A&);
+        ~A();
         void foo();
-        int bar();
-        ostream& operator<<(ostream&);
+        void bar();
+        friend ostream& operator<<(ostream&, const A&);
 };
+
+A f1(A);
+A f2(A&);
+A& f3(const A&);
 
 #endif
