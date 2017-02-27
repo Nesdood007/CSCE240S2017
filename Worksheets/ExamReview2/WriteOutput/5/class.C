@@ -31,7 +31,7 @@ A f2(A& a) {
     a.bar();
     return a;
 }
-A& f3(const A& a) {
+A& f3(A& a) {
     a.foo();
     a.bar();
     return a;

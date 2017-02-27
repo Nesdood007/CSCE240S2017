@@ -7,7 +7,7 @@ Class::Class() {
 
 Class::Class(const Class& ref) {
     cout << "Copied" << endl;
-    a = ref.a++;
+    a = ref.a + 1;
 }
 
 Class::~Class() {
@@ -27,18 +27,18 @@ void f1(Class a) {
 void f2(Class& a) {
     Class *b = &a;
     a.foo();
-    *b.foo();
+    (*b).foo();
 }
 Class f3(Class a) {
     a.foo();
     Class b = a;
     return b;
 }
-Class& f4(Class a) {
+Class f4(Class a) {
     a.foo();
     Class b = a;
     b.foo();
-    return &b;
+    return b;
 }
 Class& f5(Class &a) {
     return a;

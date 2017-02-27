@@ -2,18 +2,18 @@
 #define CLASS_H
 
 #include <iostream>
-using namespacce std;
+using namespace std;
 
 class Hole {
-    int *a = new int[5];
-    int b = 5;
+    int *a;
+    int b;
     public:
         Hole();
         ~Hole();
         void foo();
         void fill(int);
-        friend void a(const Hole&, Hole&);
-        ostream& operator<<(ostream&);
-}
+        friend void f(Hole&, Hole&);
+        friend ostream& operator<<(ostream&, const Hole&);
+};
 
 #endif

@@ -1,4 +1,4 @@
-/*  Exam Review 2 - Question WO-3: Classes and Things
+/*  Exam Review 2 - Question WO-3: Parameter Evaluations
  *      Overloading Functions
  */
 #include "class.h"

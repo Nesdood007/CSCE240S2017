@@ -2,13 +2,8 @@
 #define CLASS_H
 
 #include <iostream>
-using namespacce std;
+using namespace std;
 
-void f1(Class a);
-void f2(Class& a);
-Class f3(Class a);
-Class& f4(Class a);
-Class& f5(Class &a);
 
 class Class {
     int a;
@@ -18,4 +13,9 @@ class Class {
         ~Class();
         void foo();
 };
+void f1(Class a);
+void f2(Class& a);
+Class f3(Class a);
+Class f4(Class a);
+Class& f5(Class &a);
 #endif

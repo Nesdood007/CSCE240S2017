@@ -2,7 +2,7 @@
 #define CLASS_H
 
 #include <iostream>
-using namespacce std;
+using namespace std;
 
 int f1(int &);
 int f2(int);

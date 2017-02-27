@@ -3,7 +3,7 @@
  */
 #include "class.h"
 int main() {
-    int a* = 5, b* = 6, c*;
+    int *a = new int(5), *b = new int(6), *c = new int(0);
     *c = *a **b;
     cout << *c << endl;
 }

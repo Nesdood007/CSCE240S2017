@@ -1,0 +1,12 @@
+Constructed
+Constructed
+Copied
+Copied
+Destroyed
+Destroyed
+Copied
+Destroyed
+Destroyed
+17 10
+
+Destroyed

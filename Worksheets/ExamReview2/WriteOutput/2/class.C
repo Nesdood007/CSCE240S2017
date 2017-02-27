@@ -1,4 +1,4 @@
-#include "Class.h"
+#include "class.h"
 
 int a = 3;
 
@@ -19,12 +19,12 @@ void A::bar() {
     b++;
 }
 
-ostream& A::operator<<(ostream& out) {
-    out << a << " " << b;
+ostream& operator<<(ostream& out, const A &a) {
+    out << a.a << " " << a.b;
     return out;
 }
 
-void f1(const A& a1, const A& a2) {
+void f1(A &a1, A &a2) {
     a--;
     a1.foo();
     a2.bar();

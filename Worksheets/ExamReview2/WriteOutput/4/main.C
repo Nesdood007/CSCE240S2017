@@ -3,11 +3,12 @@
  */
 #include "class.h"
 int main() {
-    int a = 5, b = 6, *c = 7;
+    int a = 5, b = 6, *c = &a;
     int d, e, f;
+    *c = 7;
     d = f1(a);
     e = f2(b);
     f = f3(c);
-    cout << a << " " << b << " " << c << " " << d << " " 
+    cout << a << " " << b << " " << *c << " " << d << " " 
       << e << " " << f << endl;
 }

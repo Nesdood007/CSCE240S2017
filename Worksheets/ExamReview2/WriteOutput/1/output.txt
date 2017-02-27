@@ -1,0 +1,27 @@
+Constructed
+Copied
+Copied
+Deleted
+A is 4
+Deleted
+A is 3
+Constructed
+Copied
+Copied
+Deleted
+A is 8
+Deleted
+A is 7
+Copied
+Copied
+Deleted
+A is 14
+Deleted
+A is 11
+Deleted
+A is 4
+Copied
+Deleted
+A is 15
+Deleted
+A is 14

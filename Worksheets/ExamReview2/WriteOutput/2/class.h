@@ -2,9 +2,8 @@
 #define CLASS_H
 
 #include <iostream>
-using namespacce std;
+using namespace std;
 
-void f1(const A&, const A&);
 
 class A {
     int a;
@@ -13,8 +12,8 @@ class A {
         A();
         A(const A&);
         void foo();
-        int bar();
-        ostream& operator<<(ostream&);
+        void bar();
+        friend ostream& operator<<(ostream&, const A&);
 };
-
+void f1(A&, A&);
 #endif

@@ -2,7 +2,7 @@
 #define CLASS_H
 
 #include <iostream>
-using namespacce std;
+using namespace std;
 
 class A {
     int a, b;
@@ -17,6 +17,6 @@ class A {
 
 A f1(A);
 A f2(A&);
-A& f3(const A&);
+A& f3(A&);
 
 #endif

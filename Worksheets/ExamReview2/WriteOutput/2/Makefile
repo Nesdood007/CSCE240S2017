@@ -5,7 +5,7 @@ EXEC = exec.out
 OUT = output.txt
 
 all: main.o class.o
-	$(CC) $(CCFLAG) -o $(OUT)
+	$(CC) $(CCFLAG) -o $(EXEC) main.o class.o
 
 main.o: main.C
 	$(CC) $(CCFLAG) -c main.C
@@ -16,4 +16,5 @@ class.o: class.C class.h
 clean:
 	rm -rf *.o $(EXEC)
 
-out: ./$(EXEC) > $(OUT)
+out: 
+	./$(EXEC) > $(OUT)
