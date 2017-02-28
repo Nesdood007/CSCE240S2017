@@ -1,45 +1,45 @@
 #include "class.h"
 
-A::A() {
+Class::Class() {
     cout << "Constructed" << endl;
     a = 0;
 }
 
-A::A(const A& ref) {
+Class::Class(const Class& ref) {
     cout << "Copied" << endl;
     a = ref.a + 1;
 }
 
-A::~A() {
+Class::~Class() {
     cout << "Deleted" << endl;
     cout << "A is " << a << endl;
 }
 
-void A::foo() {
+void Class::foo() {
     a += 2;
 }
 
-void f1(A a) {
-    A b = a;
+void f1(Class a) {
+    Class b = a;
     b.foo();
     a.foo();
 }
-void f2(A& a) {
-    A *b = &a;
+void f2(Class& a) {
+    Class *b = &a;
     a.foo();
     (*b).foo();
 }
-A f3(A a) {
+Class f3(Class a) {
     a.foo();
-    A b = a;
+    Class b = a;
     return b;
 }
-A f4(A a) {
+Class f4(Class a) {
     a.foo();
-    A b = a;
+    Class b = a;
     b.foo();
     return b;
 }
-A& f5(A &a) {
+Class& f5(Class &a) {
     return a;
 }

@@ -5,17 +5,17 @@
 using namespace std;
 
 
-class Class {
+class A {
     int a;
     public:
-        Class();
-        Class(const Class&);
-        ~Class();
+        A();
+        A(const A&);
+        ~A();
         void foo();
 };
-void f1(Class a);
-void f2(Class& a);
-Class f3(Class a);
-Class f4(Class a);
-Class& f5(Class &a);
+void f1(A a);
+void f2(A& a);
+A f3(A a);
+A f4(A a);
+A& f5(A &a);
 #endif
