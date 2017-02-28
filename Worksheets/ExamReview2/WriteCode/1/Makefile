@@ -16,4 +16,5 @@ class.o: class.C class.h
 clean:
 	rm -rf *.o $(EXEC)
 
-out: ./$(EXEC) > $(OUT)
+out: 
+	./$(EXEC) > $(OUT)
