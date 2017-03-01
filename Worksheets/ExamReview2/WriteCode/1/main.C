@@ -3,3 +3,13 @@
  */
  
 #include "class.h"
+
+int main() {
+    char a[] = "Hello", b[] = "world", c[] = "Hi";
+    String sa(a), sb(b), sc(c);
+
+    sc = sa + sb;
+    cout << sc << endl;
+    sc += sa;
+    cout << sa << endl;
+}

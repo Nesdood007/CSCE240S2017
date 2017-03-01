@@ -5,10 +5,10 @@
 
 int main() {
     Stack stk;
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 5; i++) {
         stk.push(i);
     }
-    cout << stk.peek();
+    cout << stk.peek() << endl;
     
     while (!stk.isEmpty()) {
         cout << stk.pop() << endl;

@@ -7,25 +7,25 @@ Complex::Complex(int r, int i) {
 Complex::~Complex() {
     //Don't really need one
 }
-Complex&::Complex& operator+(const Complex& a) {
-    Complex *toReturn = new Class(a.real + real, b.imag + imag);
+Complex& Complex::operator+(const Complex& a) {
+    Complex *toReturn = new Complex(a.real + real, a.imag + imag);
     return *toReturn;
 }
-Complex&::Complex& operator-(const Complex& a) {
-    Complex *toReturn = new Class(a.real - real, b.imag - imag);
+Complex& Complex::operator-(const Complex& a) {
+    Complex *toReturn = new Complex(a.real - real, a.imag - imag);
     return *toReturn;
 }
-Complex&::Complex& operator+=(const Complex& a) {
+Complex& Complex::operator+=(const Complex& a) {
     real += a.real;
     imag += a.imag;
     return *this;
 }
-Complex&::Complex& operator-=(const Complex& a) {
+Complex& Complex::operator-=(const Complex& a) {
     real -= a.real;
     imag -= a.imag;
     return *this;
 }
 ostream& operator<<(ostream& out, const Complex& a) {
-    out << "(" << real << " + " << imag << "i)";
+    out << "(" << a.real << " + " << a.imag << "i)";
     return out;
 }

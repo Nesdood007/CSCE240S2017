@@ -7,10 +7,10 @@ using namespace std;
 
 class String {
     char *str;
-    int length;
+    int len;
     public:
         String();
-        String(char *);
+        String(const char *);
         ~String();
         char* getCharArray();
         int length();

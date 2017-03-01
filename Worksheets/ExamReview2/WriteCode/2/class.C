@@ -10,9 +10,9 @@ Stack::~Stack() {
 }
 void Stack::push(int a) {
     if (head == NULL) {
-        head = new Node(int a, NULL);
+        head = new Node(a, NULL);
     } else {
-        Node *temp = new Node(int a, head);
+        Node *temp = new Node(a, head);
         head = temp;
     }
 }
@@ -32,7 +32,7 @@ int Stack::pop() {
         return toReturn;
     }
     cerr << "ERROR" << endl;
-    throw -1
+    throw -1;
 }
 bool Stack::isEmpty() {
     return head == NULL;

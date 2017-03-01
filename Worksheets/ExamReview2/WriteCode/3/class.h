@@ -14,5 +14,5 @@ class Complex {
         Complex& operator+=(const Complex&);
         Complex& operator-=(const Complex&);
         friend ostream& operator<<(ostream&, const Complex&);
-}
+};
 #endif
